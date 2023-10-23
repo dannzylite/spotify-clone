@@ -1,0 +1,98 @@
+.search {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2.4rem;
+    gap: 4rem;
+}
+
+.head, .song_text{
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.song_text {
+    margin-left: 1rem;
+}
+
+.artist {
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.text {
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: 1.2rem;
+}
+
+.content {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.215);
+    padding: 3.2rem;
+    border-radius: 11px;
+    position: relative;
+    transition: all 0.4s;
+}
+
+.play {
+    background: #40c057;
+    border: none;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0, .25);
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.play .play_arrow {
+    font-size: 2rem;
+}
+
+.content:hover {
+    background-color: #8781812b;
+}
+
+.content:hover .play {
+    opacity: 1;
+}
+
+.content img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin-bottom: 1.6rem;
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem;
+    gap: 1.6rem;
+
+}
+
+.caterogries {
+    padding: 1.6rem 3.2rem;
+}
+
+.caterogries a:link, .caterogries a:visited {
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: #f4f3f3
+}
+
+.catergory {
+    width: 100%;
+    height: 20rem;
+    border-radius: 9px;
+    padding: 2.4rem 3.2rem;
+}

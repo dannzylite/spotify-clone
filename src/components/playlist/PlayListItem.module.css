@@ -1,0 +1,143 @@
+.content {
+    display: flex;
+    margin: 1rem 3.2rem;
+    padding: 0.5rem 3.2rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.content:hover {
+    background-color: rgba(234, 227, 227, 0.155);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.content:hover .icon, .content:hover .play_arrow {
+    opacity: 1;
+}
+
+.content:hover .id span {
+    opacity: 0;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #d7d7d7;
+}
+
+.content .song_name {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.artists_box {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.artists_box span {
+    background-color: #d7d7d7;
+    display: inline-block;
+    padding: 0.1rem 0.2rem;
+    font-size: 1rem;
+    color: #000;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2px;
+}
+
+.id {
+    width: 2.2rem;
+    position: relative;
+}
+
+.id button {
+    border: none;
+    background: transparent;
+}
+
+.id .play_arrow {
+    position: absolute;
+    top: -2px;
+    left: -7px;
+    font-size: 2.4rem;
+    opacity: 0;
+    color: #fff;
+}
+
+.main {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.main img {
+    width: 4.4rem;
+    height: 4.4rem;
+}
+
+.content_box {
+    overflow: hidden;
+    width: 35rem;
+}
+
+.content_box p, .album_box p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.album_box {
+    overflow: hidden;
+    width: 20rem;
+    margin-right: 1rem;
+}
+
+.album_name {
+    flex: 1;
+}
+
+.added_at {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.added_at .icon {
+    font-size: 2rem;
+    margin-right: 3.2rem;
+    opacity: 0;
+}
+
+.fav .icon {
+    opacity: 1;
+    color: #40c057;
+}
+
+
+.duration {
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+.duration .icon {
+    font-size: 2rem;
+    opacity: 0;
+    /* margin-left: 1rem; */
+}
+
+.btn, .fav{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}

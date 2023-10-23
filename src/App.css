@@ -1,0 +1,19 @@
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom right, rgb(23, 23, 23), rgb(37, 36, 36));
+    /* overflow: hidden; */
+}
+
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.pages {
+    flex: 1;
+    overflow-y: auto;
+    /* width: 60rem; */
+}

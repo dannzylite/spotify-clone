@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Noto Sans JP',"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-size: 62.50%;
+}
+
+body {
+  margin: 0;
+  background-color: #3f3f3f;
+}
+
+::-webkit-scrollbar {
+  width: 6px!important;
+  height: 6px!important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsla(0,0%,100%,.16);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  background-color: initial;
+}
+

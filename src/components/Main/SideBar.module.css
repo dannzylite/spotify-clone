@@ -1,0 +1,138 @@
+.sidebar {
+    background-color: black;
+    padding: 1.6rem;
+    max-width: 25rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.sidebar h2 {
+    font-size: 1.6rem;
+    color: #d7d7d7;
+}
+
+.header {
+    padding: 1.6rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    padding: 1.6rem;
+    border-bottom: 1px solid #868e96;
+}
+
+
+.filler {
+    height: 2rem;
+}
+
+.sidebar a:link,
+.sidebar a:visited {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: #d7d7d7;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.sidebar a:hover,
+.sidebar a:hover .icon,
+.sidebar a:active,
+.sidebar a:active .icon,
+.sidebar a.active,
+.sidebar a.active .icon{
+    color: #fff;
+}
+
+.sidebar a:hover .playlist .icon,
+.sidebar a:active .playlist .icon ,
+.sidebar a.active .playlist .icon{
+    color: #000;
+}
+
+.sidebar .playlist-link:hover .playlist,
+.sidebar .playlist-link:active .playlist,
+.sidebar .playlist-link.active .playlist{
+    background-color: #fff;
+    color: #000;
+}
+
+
+.sidebar .icon {
+    font-size: 3rem;
+    color: #d7d7d7;
+    transition: all 0.4s;
+}
+
+.playlist {
+    background-color: #d7d7d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    padding: 0.6rem;
+    transition: all 0.4s;
+}
+
+.sidebar .playlist-link:link,
+.sidebar .playlist-link:visited {
+    margin-bottom: 1rem;
+}
+
+.playlist .icon {
+    color: #000;
+    font-size: 2rem;
+}
+
+.liked {
+    background: linear-gradient(to bottom right, rgb(216, 108, 216),rgb(99, 99, 179));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+    border-radius: 2px;
+}
+
+.liked .icon {
+    font-size: 1.6rem;
+}
+
+.download {
+    margin-top: auto;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    transform: translate(20px);
+}
+
+.download p{
+    color: #d7d7d7;
+    font-size: 1.6rem;
+}
+
+.playlist_btn {
+    background: transparent;
+    border: none;
+    color: #d7d7d7;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.4s;
+}
+
+.playlist_btn:hover {
+    color: #fff;
+}
+
+.playlist_btn:hover .playlist {
+    background-color: #fff;
+
+}
