@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import PlayListItem from '../components/playlist/PlayListItem'
-import { data } from '../Data/playlist'
 import classes from './Playlist.module.css'
 import { PlayArrow, FavoriteBorderOutlined, MoreHorizRounded, AccessTimeOutlined } from '@material-ui/icons'
 import Header from '../components/Layout/Header'
@@ -30,33 +29,6 @@ export default function Playlist() {
         sendRequest(id)
     },[sendRequest, id])
 
-    // if (isLoading === 'pending') {
-
-    //     return <>
-    //     <Header/>
-    //     <p ref={containerRef}>Loading....
-    //         <div ref={btnRef}></div>
-    //     </p>
-    //     </>
-    // }
-    // console.log(show,2332)
-
-    // const items = data.items
-    // const cover = data.cover
-    // const description = data.description
-    // const likes = data.likes
-    // const name = data.name
-    // const total = data.total
-    // const color = data.color
-
-    // console.log(items)
-     
-
-    // function getDuration(duration_min) {
-    //     const duration_sec = (duration_min - Math.floor(duration_min)) * 60
-    //     const duration = Math.floor(duration_min) + (Math.floor(duration_sec) / 100)
-    //     return duration.toFixed(2)
-    // }
     function getTime(addedAt) {
         const currentdate = new Date()
         const dateAdded = new Date(addedAt)
@@ -64,22 +36,6 @@ export default function Playlist() {
         const diffDay = Math.ceil(diffrence / (1000 * 60 * 60 * 24))
         return diffDay
     }
-
-    // const artist = items[0].track.artists
-
-    // function getArtist(artists) {
-    //     let artistsStr = ''
-    //     for (let i = 0; i < artists.length; i++) {
-    //         if (i > 0) {
-    //             artistsStr += ', '
-    //         }
-    //         const name = artists[i].name
-    //         artistsStr += name
-    //     }
-    //     return artistsStr
-    // }
-    // const dur = getDuration(duration_min)
-    // console.log(getArtist(artist))
     
     return (
         <>
@@ -145,12 +101,6 @@ export default function Playlist() {
                 return <PlayListItem
                 key={id}
                 id={id+1}
-            //       cover={cover}
-            //   description={description}
-            //       name={name}
-            //       total={total}
-            //       likes={likes}
-            //       color={color}
                   artists={getArtist(item.track.artists)}
                   albumImg={item.track.album.images[2].url}
                   albumName={item.track.album.name}
@@ -166,31 +116,3 @@ export default function Playlist() {
     </>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // const albumImg = items[0].track.album.images[2].url
-    // const albumName = items[0].track.album.name
-    // const songName = items[0].track.name
-    // const duration_min = items[0].track.duration_ms / 60000 
-    // const duration_sec = (duration_min - Math.floor(duration_min)) * 60
-    // const duration = Math.floor(duration_min) + (Math.floor(duration_sec) / 100)
-    // const currentdate = new Date()
-    // const dateAdded = new Date(items[0].added_at)
-    // const diffrence = Math.abs(currentdate - dateAdded)
-    // const diffDay = Math.ceil(diffrence / (1000 * 60 * 60 * 24))

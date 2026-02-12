@@ -1,9 +1,9 @@
-import React, { useCallback, useState } from 'react'
+import { useCallback, useState } from 'react'
 
 export default function useHttp(reqFn, loading=false) {
     const [data, setData] = useState(null)
     const [isLoading, setIsLoading] = useState(loading ? 'pending' : null)
-    const [error, setError] = useState(null)
+    const [, setError] = useState(null)
 
     const sendRequest = useCallback(async (reqData) => {
         setIsLoading('pending')

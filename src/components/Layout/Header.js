@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { PersonOutlineOutlined, Search, ArrowDropDownOutlined, ChevronLeftOutlined, ChevronRightOutlined, PlayArrow } from '@material-ui/icons'
 import classes from './Header.module.css'
 import getArtist from '../../utils/format-artist'
@@ -13,7 +13,6 @@ export default function Header(props) {
     // const [sticky, setSticky] = useState(true)
     // console.log(props.show,77)
     const [enteredText, setEnteredText] = useState('')
-    const { loading, setIsLoading } = useState(false)
     const [showOption, setShowOption ] = useState(false)
     const isLoggedIn = useSelector(state => state.ui.isLoggedIn)
     const dispatch = useDispatch()
@@ -53,6 +52,7 @@ export default function Header(props) {
         return () => {
             clearTimeout(timer)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [enteredText])
 
     console.log(enteredText)

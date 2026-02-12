@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import useHttp from './use-http';
+import { useEffect, useState } from 'react'
 
 export default function useObserve(Ref, margin, threshold=0) {
     const [sticky, setSticky] = useState() 

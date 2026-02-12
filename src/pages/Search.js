@@ -3,14 +3,12 @@ import Header from "../components/Layout/Header";
 import { useSelector } from "react-redux";
 import classes from "./Search.module.css";
 import SearchItem from "../components/search/SearchItem";
-import CatergoryList from "../components/catergories/CatergoryList";
 import { caterogries } from "../Data/data";
 import { Link } from "react-router-dom";
 import { PlayArrow } from "@material-ui/icons";
 
 export default function Search() {
   const songs = useSelector((state) => state.search.searched);
-  const title = Object.keys(caterogries);
   console.log(caterogries);
   function getRandomColor() {
     const color = [
@@ -32,7 +30,7 @@ export default function Search() {
           <div>
             <p className={classes.head}>Top Result</p>
             <div className={classes.content}>
-              <img src={songs[0].albumImg} />
+              <img src={songs[0].albumImg} alt='top result' />
               <p className={classes.artist}>{songs[0].artists}</p>
               <p className={classes.text}>Artist</p>
             <button className={classes.play}>

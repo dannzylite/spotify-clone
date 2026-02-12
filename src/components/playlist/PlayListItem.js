@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import classes from './PlayListItem.module.css'
-import { PlayArrow, Pause, FavoriteBorderOutlined, MoreHorizRounded, AccessTimeOutlined, FavoriteRounded } from '@material-ui/icons'
+import { PlayArrow, Pause, FavoriteBorderOutlined, MoreHorizRounded, FavoriteRounded } from '@material-ui/icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { likedActions } from '../../store/liked-slice'
 import { playerActions } from '../../store/player-slice'
@@ -13,16 +13,10 @@ export default function PlayListItem(props) {
     const like = useSelector(state => state.liked.likedSongs)
     const isPlaying = useSelector(state => state.ui.isPlaying)
     const playing = useSelector(state => state.ui.playing)
-    const [continueSong, setContinueSong] = useState(false)
+    const [continueSong] = useState(false)
     console.log(like, 888)
     const dispatch = useDispatch()
     spotify.setAccessToken(window.localStorage.getItem('token'));
-    // useEffect(() => {
-    //     if (isPlaying) {
-    //       setContinueSong(true)
-    //     }
-    //     if (props.songId)
-    // }, [isPlaying])
     
     function addToLikedHandler() {
         dispatch(likedActions.addToLiked({
@@ -88,8 +82,7 @@ export default function PlayListItem(props) {
                 console.log('Something went wrong!', err);
             });
     }
-    // console.log(props.songId, 'propss')
-    // console.log(playing, '372882')
+
     function continueSongHandler() {
         dispatch(uiActions.play())
         spotify.play()

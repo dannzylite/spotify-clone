@@ -2,15 +2,9 @@ import React from 'react'
 import { Add, FavoriteRounded, Home, Search, LibraryMusicRounded} from '@material-ui/icons';
 import classes from './SideBar.module.css'
 import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { playlistActions } from '../../store/playlist-slice';
 
 
 export default function SideBar() {
-  const dispatch = useDispatch()
-  function addToPlaylistHandler() {
-    dispatch(playlistActions.addPlaylist)
-  }
   return (
     <div className={classes.sidebar}>
       <div className={classes.header}>

@@ -1,8 +1,7 @@
 import React from 'react'
 import classes from './SearchItem.module.css'
-import { PlayArrow, FavoriteBorderOutlined, MoreHorizRounded, AccessTimeOutlined, FavoriteRounded, Pause } from '@material-ui/icons'
+import { PlayArrow, FavoriteBorderOutlined, MoreHorizRounded, Pause } from '@material-ui/icons'
 import { useDispatch, useSelector } from 'react-redux'
-import { likedActions } from '../../store/liked-slice'
 import { playerActions } from '../../store/player-slice'
 import SpotifyWebApi from 'spotify-web-api-node'
 import { uiActions } from '../../store/ui-slice'
@@ -14,25 +13,6 @@ export default function SearchItem(props) {
     const isPlaying = useSelector(state => state.ui.isPlaying)
     console.log(like, 888)
     const dispatch = useDispatch()
-    // function addToLikedHandler() {
-    //     dispatch(likedActions.addToLiked({
-    //         id: props.id,
-    //         songName: props.songName,
-    //         artists: props.artists,
-    //         albumImg: props.albumImg,
-    //         duration: props.duration,
-    //         // albumName: props.albumName,
-    //         // addedAt: new Date(),
-    //         // songId: props.songId,
-    //         // liked: true
-    //     }))
-    //     dispatch(likedActions.setLikedSongs(props.songId))
-    // }
-    // function removeLikedHandler() {
-    //     console.log('removeee2')
-    //     dispatch(likedActions.removeFromLiked(props.songId))
-    //     dispatch(likedActions.removeLikedSong(props.songId))
-    // }
 
     function addPlayerHandler() {
         playHandler(props.songId)
@@ -71,16 +51,6 @@ export default function SearchItem(props) {
             });
     }
 
-    function continueSongHandler() {
-        dispatch(uiActions.play())
-        spotify.play()
-          .then(function() {
-              console.log('Playback started');
-          }, function(err) {
-              //if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned
-              console.log('Something went wrong!', err);
-          });
-      }
   return (
       <li className={classes.content}>
           <p className={classes.id}>

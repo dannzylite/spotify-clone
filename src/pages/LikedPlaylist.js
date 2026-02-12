@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Header from "../components/Layout/Header";
 import useObserve from "../Hooks/use-observe";
 import classes from "./LikedPlaylist.module.css";
-import { Add, FavoriteRounded, Home, Search, LibraryMusicRounded, MoreHorizRounded, FavoriteBorderOutlined, PlayArrow, AccessTimeOutlined} from '@material-ui/icons';
+import { FavoriteRounded, PlayArrow, AccessTimeOutlined} from '@material-ui/icons';
 import PlayListItem from "../components/playlist/PlayListItem";
 
 export default function LikedPlaylist() {

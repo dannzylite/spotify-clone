@@ -22,9 +22,8 @@ export default function CatergoryList(props) {
     console.log(items)
     function formatDescription(description) {
         let formatedDescription = ''
-        const arr = description.split(' ')
-        const arr1 = description.split('.')
-        // console.log(arr1)
+        description.split(' ')
+        description.split('.')
         // const pun = '.!<'
         for (const word in description) {
             if (description[word] === '.' || description[word] === '!' || description[word] === '<') {
@@ -54,7 +53,7 @@ export default function CatergoryList(props) {
                 //   console.log(item.images[0])
                   return <figure onClick={navigateHandler.bind(null,item.id)}>
                       <div className={classes.img_box}>
-                          <img src={item.images[0].url} alt='an image' />
+                          <img src={item.images[0].url} alt='playlist cover' />
                       </div>
                       <p className={classes.name}>{item.name}</p>
                       <div className={classes.description_box}>

@@ -1,5 +1,5 @@
 import { LinearProgress } from '@material-ui/core'
-import { DevicesOutlined, ExpandMore, FavoriteRounded, Mic, OpenInNew, Pause, PlayArrow, QueueMusic, Repeat, Shuffle, SkipNext, SkipPrevious, VolumeUp } from '@material-ui/icons'
+import { DevicesOutlined, FavoriteRounded, Mic, OpenInNew, Pause, PlayArrow, QueueMusic, Repeat, Shuffle, SkipNext, SkipPrevious, VolumeUp } from '@material-ui/icons'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import SpotifyWebApi from 'spotify-web-api-node'
@@ -100,7 +100,7 @@ export default function Footer() {
      <div className={classes.footer}>
       <div className={classes.content}>
         <div className={classes.img_box}>
-          {current.albumImg && <img src={current.albumImg} alt='album image' />}
+          {current.albumImg && <img src={current.albumImg} alt='album cover' />}
         </div>
         <div className={classes.song_info}>
           <p>{current.songName}</p>
